@@ -1,38 +1,178 @@
-.App {
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f5f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+.heading {
   text-align: center;
+  color: #268b4f;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropzone {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 30px;
+  border: 2px dashed #268b4f;
+  border-radius: 8px;
+  background-color: #dff3e0;
+  color: #268b4f;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.dropzone p {
+  margin: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.selected-file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.selected-file img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.detect-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #268b4f;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.detect-btn:disabled {
+  background-color: #9cd2a0;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f5f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-heading {
+  color: #268b4f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.disease-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.disease-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #268b4f;
+}
+
+.confidence {
+  font-size: 16px;
+  color: #268b4f;
+}
+
+.organic-cure,
+.prevention-measures {
+  margin-bottom: 20px;
+}
+
+.organic-cure h3,
+.prevention-measures h3 {
+  color: #268b4f;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+li {
+  color: #268b4f;
+}
+
+
+/* Styles for the dropdown */
+.api-dropdown {
+  background-color: #4caf50; /* Green background color */
+  color: #fff; /* White text color */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Styles for the dropdown options */
+.api-dropdown option {
+  background-color: #4caf50; /* Green background color */
+  color: #fff; /* White text color */
+}
+
+/* Hover styles for the dropdown options */
+.api-dropdown option:hover {
+  background-color: #45a049; /* Darker green background color on hover */
+}
+
+/* App.css */
+
+/* App.css */
+
+.api-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.api-dropdown {
+  background-color: #4caf50; /* Green background color */
+  color: #fff; /* White text color */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.api-dropdown option {
+  background-color: #4caf50; /* Green background color */
+  color: #fff; /* White text color */
+}
+
+.api-dropdown option:hover {
+  background-color: #45a049; /* Darker green background color on hover */
 }
