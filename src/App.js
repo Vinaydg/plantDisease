@@ -223,8 +223,8 @@ const App = () => {
         <div className="api-dropdown-container">
         <select value={selectedAPI} onChange={handleAPIChange} className="api-dropdown">
           <option value="">Select an API</option>
-          <option value=" http://127.0.0.1:8000/predict">Common Plants</option>
-          <option value=" http://127.0.0.1:8080/predict">Uncommon Plants</option>
+          <option value=" http://127.0.0.1:8000/predict">Common Plants (Corn, Grape, Bell Pepper, Potato, Tomato)</option>
+          <option value=" http://127.0.0.1:8080/predict">Uncommon Plants (Apple, Blueberry, Cherry, Peach, Raspberry, Soybean, Squash, Strawberry)</option>
           {/* Add more options for different APIs */}
         </select>
         </div>
@@ -237,7 +237,7 @@ const App = () => {
         <div className="result">
           <h2 className="result-heading">Disease Detected</h2>
           <div className="disease-info">
-            <p className="disease-name">{diseaseResult.class}</p>
+            <p className="disease-name">{diseaseResult.class.replace(/_/g, ' ')}</p>
             <p className="confidence">Confidence: {Math.round(diseaseResult.confidence * 100)}%</p>
           </div>
           <div className="organic-cure">
@@ -260,8 +260,14 @@ const App = () => {
       )}
 
       {isHealthy && (
-        <div className="result">
+        <div className="result healthy">
           <h2 className="result-heading">Plant is Healthy</h2>
+          {diseaseResult && (
+      <div className="disease-info">
+      <p className="disease-name">{diseaseResult.class.replace(/_/g, ' ')}</p>
+      <p className="confidence">Confidence: {Math.round(diseaseResult.confidence * 100)}%</p>
+    </div>
+    )}
           <p className="healthy-text">No disease detected.</p>
         </div>
       )}

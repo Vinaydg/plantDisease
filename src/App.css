@@ -176,3 +176,7 @@ li {
 .api-dropdown option:hover {
   background-color: #45a049; /* Darker green background color on hover */
 }
+
+.healthy {
+  text-align: center;
+}
