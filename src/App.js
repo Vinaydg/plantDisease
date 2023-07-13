@@ -180,7 +180,11 @@ const App = () => {
       const formData = new FormData();
       formData.append('file', selectedFile);
 
-      const response = await axios.post(selectedAPI, formData);
+      const response = await axios.post(selectedAPI, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
 
       if (response.data) {
         setDiseaseResult(response.data);
@@ -219,8 +223,8 @@ const App = () => {
         <div className="api-dropdown-container">
         <select value={selectedAPI} onChange={handleAPIChange} className="api-dropdown">
           <option value="">Select an API</option>
-          <option value=" http://192.168.100.221:8000/predict">Common Plants</option>
-          <option value=" http://192.168.100.221:8080/predict">Uncommon Plants</option>
+          <option value=" http://127.0.0.1:8000/predict">Common Plants</option>
+          <option value=" http://127.0.0.1:8080/predict">Uncommon Plants</option>
           {/* Add more options for different APIs */}
         </select>
         </div>
