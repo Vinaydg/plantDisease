@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/plantDisease/static/css/main.c3b27628.css",
-    "main.js": "/plantDisease/static/js/main.154fca9b.js",
+    "main.js": "/plantDisease/static/js/main.ebfb8b03.js",
     "static/js/787.f32c42b0.chunk.js": "/plantDisease/static/js/787.f32c42b0.chunk.js",
     "index.html": "/plantDisease/index.html",
     "main.c3b27628.css.map": "/plantDisease/static/css/main.c3b27628.css.map",
-    "main.154fca9b.js.map": "/plantDisease/static/js/main.154fca9b.js.map",
+    "main.ebfb8b03.js.map": "/plantDisease/static/js/main.ebfb8b03.js.map",
     "787.f32c42b0.chunk.js.map": "/plantDisease/static/js/787.f32c42b0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3b27628.css",
-    "static/js/main.154fca9b.js"
+    "static/js/main.ebfb8b03.js"
   ]
 }
